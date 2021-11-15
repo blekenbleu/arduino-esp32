@@ -24,6 +24,53 @@
  *
  */
 
+/*                      */
+/* COMMON CONFIGURATION */
+/*                      */
+
+#define CFG_TUSB_MCU				OPT_MCU_ESP32S2
+#define CFG_TUSB_RHPORT0_MODE       OPT_MODE_DEVICE
+#define CFG_TUSB_OS                 OPT_OS_FREERTOS
+
+/*                      */
+/* DRIVER CONFIGURATION */
+/*                      */
+
+#define CFG_TUD_MAINTASK_SIZE 		4096
+#define CFG_TUD_ENDOINT0_SIZE 		64
+
+// Enabled Drivers
+#define CFG_TUD_CDC 				CONFIG_TINYUSB_CDC_ENABLED
+#define CFG_TUD_MSC 				CONFIG_TINYUSB_MSC_ENABLED
+#define CFG_TUD_HID 				CONFIG_TINYUSB_HID_ENABLED
+#define CFG_TUD_MIDI 				CONFIG_TINYUSB_MIDI_ENABLED
+#define CFG_TUD_VIDEO               CONFIG_TINYUSB_VIDEO_ENABLED
+#define CFG_TUD_CUSTOM_CLASS 		CONFIG_TINYUSB_CUSTOM_CLASS_ENABLED
+#define CFG_TUD_DFU_RUNTIME			CONFIG_TINYUSB_DFU_RT_ENABLED
+#define CFG_TUD_VENDOR 				CONFIG_TINYUSB_VENDOR_ENABLED
+
+// CDC FIFO size of TX and RX
+#define CFG_TUD_CDC_RX_BUFSIZE 		CONFIG_TINYUSB_CDC_RX_BUFSIZE
+#define CFG_TUD_CDC_TX_BUFSIZE 		CONFIG_TINYUSB_CDC_TX_BUFSIZE
+
+// MSC Buffer size of Device Mass storage:
+#define CFG_TUD_MSC_BUFSIZE 		CONFIG_TINYUSB_MSC_BUFSIZE
+
+// HID buffer size Should be sufficient to hold ID (if any) + Data
+#define CFG_TUD_HID_BUFSIZE 		CONFIG_TINYUSB_HID_BUFSIZE
+
+// MIDI FIFO size of TX and RX
+#define CFG_TUD_MIDI_RX_BUFSIZE		CONFIG_TINYUSB_MIDI_RX_BUFSIZE
+#define CFG_TUD_MIDI_TX_BUFSIZE		CONFIG_TINYUSB_MIDI_TX_BUFSIZE
+
+// The number of video streaming interfaces and  endpoint size
+#define CFG_TUD_VIDEO_STREAMING     CONFIG_TINYUSB_VIDEO_STREAMING_IFS
+#define CFG_TUD_VIDEO_STREAMING_EP_BUFSIZE  CONFIG_TINYUSB_VIDEO_STREAMING_BUFSIZE
+
+// VENDOR FIFO size of TX and RX
+#define CFG_TUD_VENDOR_RX_BUFSIZE 	CONFIG_TINYUSB_VENDOR_RX_BUFSIZE
+#define CFG_TUD_VENDOR_TX_BUFSIZE 	CONFIG_TINYUSB_VENDOR_TX_BUFSIZE
+
 #pragma once
 #include "tusb_option.h"
 #include "sdkconfig.h"
@@ -68,14 +115,6 @@ extern "C" {
 #   define CONFIG_TINYUSB_VENDOR_ENABLED 0
 #endif
 
-/*                      */
-/* COMMON CONFIGURATION */
-/*                      */
-
-#define CFG_TUSB_MCU				OPT_MCU_ESP32S2
-#define CFG_TUSB_RHPORT0_MODE       OPT_MODE_DEVICE
-#define CFG_TUSB_OS                 OPT_OS_FREERTOS
-
 /* USB DMA on some MCUs can only access a specific SRAM region with restriction on alignment.
  * Tinyusb use follows macros to declare transferring memory so that they can be put
  * into those specific section.
@@ -90,45 +129,6 @@ extern "C" {
 #ifndef CFG_TUSB_MEM_ALIGN
 #   define CFG_TUSB_MEM_ALIGN       TU_ATTR_ALIGNED(4)
 #endif
-
-/*                      */
-/* DRIVER CONFIGURATION */
-/*                      */
-
-#define CFG_TUD_MAINTASK_SIZE 		4096
-#define CFG_TUD_ENDOINT0_SIZE 		64
-
-// Enabled Drivers
-#define CFG_TUD_CDC 				CONFIG_TINYUSB_CDC_ENABLED
-#define CFG_TUD_MSC 				CONFIG_TINYUSB_MSC_ENABLED
-#define CFG_TUD_HID 				CONFIG_TINYUSB_HID_ENABLED
-#define CFG_TUD_MIDI 				CONFIG_TINYUSB_MIDI_ENABLED
-#define CFG_TUD_VIDEO               CONFIG_TINYUSB_VIDEO_ENABLED
-#define CFG_TUD_CUSTOM_CLASS 		CONFIG_TINYUSB_CUSTOM_CLASS_ENABLED
-#define CFG_TUD_DFU_RUNTIME			CONFIG_TINYUSB_DFU_RT_ENABLED
-#define CFG_TUD_VENDOR 				CONFIG_TINYUSB_VENDOR_ENABLED
-
-// CDC FIFO size of TX and RX
-#define CFG_TUD_CDC_RX_BUFSIZE 		CONFIG_TINYUSB_CDC_RX_BUFSIZE
-#define CFG_TUD_CDC_TX_BUFSIZE 		CONFIG_TINYUSB_CDC_TX_BUFSIZE
-
-// MSC Buffer size of Device Mass storage:
-#define CFG_TUD_MSC_BUFSIZE 		CONFIG_TINYUSB_MSC_BUFSIZE
-
-// HID buffer size Should be sufficient to hold ID (if any) + Data
-#define CFG_TUD_HID_BUFSIZE 		CONFIG_TINYUSB_HID_BUFSIZE
-
-// MIDI FIFO size of TX and RX
-#define CFG_TUD_MIDI_RX_BUFSIZE		CONFIG_TINYUSB_MIDI_RX_BUFSIZE
-#define CFG_TUD_MIDI_TX_BUFSIZE		CONFIG_TINYUSB_MIDI_TX_BUFSIZE
-
-// The number of video streaming interfaces and  endpoint size
-#define CFG_TUD_VIDEO_STREAMING     CONFIG_TINYUSB_VIDEO_STREAMING_IFS
-#define CFG_TUD_VIDEO_STREAMING_EP_BUFSIZE  CONFIG_TINYUSB_VIDEO_STREAMING_BUFSIZE
-
-// VENDOR FIFO size of TX and RX
-#define CFG_TUD_VENDOR_RX_BUFSIZE 	CONFIG_TINYUSB_VENDOR_RX_BUFSIZE
-#define CFG_TUD_VENDOR_TX_BUFSIZE 	CONFIG_TINYUSB_VENDOR_TX_BUFSIZE
 
 #ifdef __cplusplus
 }
