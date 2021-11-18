@@ -31,7 +31,7 @@
 
 #ifndef _TUSB_CDC_H__
 #define _TUSB_CDC_H__
-
+#if CFG_TUD_CDC
 #include "common/tusb_common.h"
 
 #ifdef __cplusplus
@@ -404,6 +404,7 @@ TU_ATTR_BIT_FIELD_ORDER_END
  }
 #endif
 
+#endif	// CFG_TUD_CDC
 #endif
 
 /** @} */
