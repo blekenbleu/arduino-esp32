@@ -2,6 +2,18 @@
 
 ![Build Status](https://github.com/espressif/arduino-esp32/workflows/ESP32%20Arduino%20CI/badge.svg) [![Documentation Status](https://readthedocs.com/projects/espressif-arduino-esp32/badge/?version=latest)](https://docs.espressif.com/projects/arduino-esp32/en/latest/?badge=latest)
 
+This one of several repositories used by a [portable](https://docs.arduino.cc/software/ide-v1/tutorials/PortableIDE) Arduino 1.18.16 installation;&nbsp others are:
+- [esp32s2LED.h](https://github.com/blekenbleu/esp32s2LED) - a wrapper for Freenove_WS2812_Lib_for_ESP32.h and (ESP32_S2_ISR_Servo)
+- [MIDI WebSocket](https://github.com/blekenbleu/midi-websocket)
+- [midi-examples](https://github.com/blekenbleu/midi_examples)
+- [otherESP32S2examples](https://github.com/blekenbleu/otherESP32S2examples)
+- [TinyMIDIUSB](https://github.com/blekenbleu/TinyMIDIUSB)
+- [ESP32_S2_ISR_Servo](https://github.com/khoih-prog/ESP32_S2_ISR_Servo)
+- [Control Surface](https://github.com/tttapa/Control-Surface)
+- [AsyncTCP](https://github.com/me-no-dev/AsyncTCP)
+- [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)  
+
+.. *and now, back to this fork of* [espressif's **README**](https://github.com/espressif/arduino-esp32):
 ### Need help or have a question? Join the chat at [![https://gitter.im/espressif/arduino-esp32](https://badges.gitter.im/espressif/arduino-esp32.svg)](https://gitter.im/espressif/arduino-esp32?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Contents
