@@ -1,3 +1,5 @@
+*.lnk
+links/
 tools/xtensa-esp32-elf
 tools/xtensa-esp32s2-elf
 tools/riscv32-esp-elf

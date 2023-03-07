@@ -8,10 +8,10 @@ This one of several repositories used by a [portable](https://docs.arduino.cc/so
 - [midi-examples](https://github.com/blekenbleu/midi_examples)
 - [otherESP32S2examples](https://github.com/blekenbleu/otherESP32S2examples)
 - [TinyMIDIUSB](https://github.com/blekenbleu/TinyMIDIUSB)
-- [ESP32_S2_ISR_Servo](https://github.com/khoih-prog/ESP32_S2_ISR_Servo)
+- [ESP32_S2_ISR_Servo](https://github.com/khoih-prog/ESP32_S2_ISR_Servo) fork
 - [Control Surface](https://github.com/tttapa/Control-Surface)
-- [AsyncTCP](https://github.com/me-no-dev/AsyncTCP)
-- [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)  
+- [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) fork
+- [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)  fork
 
 .. *and now, back to this fork of* [espressif's **README**](https://github.com/espressif/arduino-esp32):
 ### Need help or have a question? Join the chat at [![https://gitter.im/espressif/arduino-esp32](https://badges.gitter.im/espressif/arduino-esp32.svg)](https://gitter.im/espressif/arduino-esp32?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
